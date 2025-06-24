@@ -1,0 +1,27 @@
+{
+  "name": "webflowpost",
+  "version": "1.0.0",
+  "description": "package for posting blogs to webflow using openAI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "openai",
+    "webflow",
+    "blogpost"
+  ],
+  "author": "vs",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/storage": "^7.13.0",
+    "axios": "^1.7.7",
+    "date-fns": "^4.1.0",
+    "dotenv": "^16.4.5",
+    "fs": "^0.0.1-security",
+    "openai": "^4.65.0",
+    "path": "^0.12.7",
+    "sharp": "^0.33.5"
+  }
+}
