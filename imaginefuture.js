@@ -7,11 +7,15 @@ const logopath = "./assets/whitelogo.png";
 
 async function run() {
   const sites = {
-    name: "workwall",
-    token: process.env.WEBFLOW_API_TOKEN,
-    collectionId: process.env.WEBFLOW_COLLECTION_ID,
-    author: "Workwall.com",
-    fields: { content: generateBlogContent, imageField: "image-featured" },
+    name: "imagine",
+    token: process.env.WEBFLOW_API_TOKEN_IMAGINE,
+    collectionId: process.env.WEBFLOW_COLLECTION_ID_IMAGINE,
+    author: "ImagineFuture.ai",
+    fields: {
+      "post-body": generateBlogContent,
+      "post-summary": null,
+      imageField: "main-image",
+    },
   };
   console.log(`\n🚀 Generating blog for ${sites.name}...`);
   const blog = await generateBlogContent();
@@ -27,9 +31,10 @@ async function run() {
     imageUrl: blog.imageUrl,
     description: blog.description,
     fields: {
-      content: blog.content,
-      imageField: "image-featured",
-    },
+              "post-body": blog.content,
+              "post-summary": null,
+              imageField: "main-image",
+            },
   });
 }
 

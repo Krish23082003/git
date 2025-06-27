@@ -31,4 +31,4 @@ jobs:
           WEBFLOW_API_TOKEN_PROSO: ${{ secrets.WEBFLOW_API_TOKEN_PROSO }}
           WEBFLOW_COLLECTION_ID: ${{ secrets.WEBFLOW_COLLECTION_ID }}
           WEBFLOW_COLLECTION_ID_PROSO: ${{ secrets.WEBFLOW_COLLECTION_ID_PROSO }}
-        run: node workwallblog.js
+        run: node postBlogToAll.js
